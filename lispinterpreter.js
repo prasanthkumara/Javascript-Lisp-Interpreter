@@ -170,7 +170,7 @@ var read_from = function (tokens) {
 var parse = read_from;
 
 
-//Creating a custom REPL
+//Creating an custom REPL
 
   process.stdin.resume();
   process.stdout.write('lisp]=> ');
