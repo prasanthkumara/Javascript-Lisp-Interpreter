@@ -1,10 +1,10 @@
-**************************************************
-PRASANTH KUMAR A
-Tiny Lisp Interpreter In Javascript
-**************************************************
+//**************************************************
+//PRASANTH KUMAR A
+//Tiny Lisp Interpreter In Javascript
+//**************************************************
 
 var Symbol = String;
---------------------------------------------------
+//--------------------------------------------------
 
 var environment = function (e) {
     	var i, env = {}, outer = e.outer || {};
@@ -33,6 +33,7 @@ var environment = function (e) {
     	return env;
 };
 
+/**********************************************************************/
 
 var add_globals = function (env) {
 
@@ -65,7 +66,10 @@ var add_globals = function (env) {
     	return env;
 };
 
+
 var global_env = add_globals(environment({params: [], args: [], outer: undefined}));
+
+//Evaluation of the tree (list of lists) through selective approach via Environment(dictionary)
 
 var eval = function (x, env) {
     	var i;
@@ -120,6 +124,8 @@ var atom = function (t) {
     	}
 };
 
+//Converting string into list of tokens
+
 function tokenize(s){
 	s=s.replace(/\(/g," ( ").replace(/\)/g," ) ").split(" ")
  	var p=[];
@@ -130,6 +136,8 @@ function tokenize(s){
  	}
 	return p;
 }
+
+//function to give tree like structure(list of lists)
 
 var read_from = function (tokens) {
     if (0 === tokens.length) {
