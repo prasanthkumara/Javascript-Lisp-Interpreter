@@ -1,4 +1,10 @@
+**************************************************
+PRASANTH KUMAR A
+Tiny Lisp Interpreter In Javascript
+**************************************************
+
 var Symbol = String;
+--------------------------------------------------
 
 var environment = function (e) {
     	var i, env = {}, outer = e.outer || {};
