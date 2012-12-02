@@ -1,8 +1,7 @@
-
 var Symbol = String;
 
-var environment = function (spec) {
-    	var i, env = {}, outer = spec.outer || {};
+var environment = function (e) {
+    	var i, env = {}, outer = e.outer || {};
         
     	var get_outer = function () {
                 return outer;
@@ -16,9 +15,9 @@ var environment = function (spec) {
         	}
     	};
     
-    	if (0 !== spec.params.length) {
-        	for (i = 0; i < spec.params.length; i += 1) {
-            		env[spec.params[i]] = spec.args[i];
+    	if (0 !== e.par.length) {
+        	for (i = 0; i < e.par.length; i += 1) {
+            		env[e.par[i]] = spec.args[i];
         	}
     	}
 
